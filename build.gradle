@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.aston'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '3.141.59'
+// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.9.2'
+}
+
+test {
+    useJUnitPlatform()
+}
